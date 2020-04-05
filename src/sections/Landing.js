@@ -104,9 +104,8 @@ const LandingPage = () => (
               style={centerHorizontally}
               mb={[2, 3, 4]}
             >
-              I'm a Vietname/France-based software engineer, currently employed
-              by Orange Logic as a full stack engineer building Cortex, the best
-              Digital Asset Management on the market.
+              I'm a fullstack Software Engineer at Orange Logc where I help
+              build Cortex, the best Digital Asset Management on the market.
             </Text>
 
             <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
