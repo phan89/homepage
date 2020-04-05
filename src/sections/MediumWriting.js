@@ -50,7 +50,7 @@ const EllipsisHeading = styled(Heading)`
   display: -webkit-inline-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  border-bottom: ${props => props.theme.colors.primary} 5px solid;
+  border-bottom: ${(props) => props.theme.colors.primary} 5px solid;
 `;
 
 const Post = ({ title, text, image, url, date, time }) => (
@@ -75,7 +75,7 @@ Post.propTypes = {
   time: PropTypes.number.isRequired,
 };
 
-const parsePost = author => postFromGraphql => {
+const parsePost = (author) => (postFromGraphql) => {
   const { id, uniqueSlug, createdAt, title, virtuals } = postFromGraphql;
   const image =
     virtuals.previewImage.imageId &&
@@ -130,9 +130,9 @@ MorePosts.propTypes = {
   number: PropTypes.number,
 };
 
-const edgeToArray = data => data.edges.map(edge => edge.node);
+const edgeToArray = (data) => data.edges.map((edge) => edge.node);
 
-const Writing = () => (
+const MediumWriting = () => (
   <StaticQuery
     query={graphql`
       query MediumPostQuery {
@@ -198,4 +198,4 @@ const Writing = () => (
   />
 );
 
-export default Writing;
+export default MediumWriting;

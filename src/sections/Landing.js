@@ -11,21 +11,21 @@ import Triangle from '../components/Triangle';
 const Background = () => (
   <div>
     <Triangle
-      color="backgroundDark"
-      height={['35vh', '80vh']}
-      width={['95vw', '60vw']}
+      color="primaryDark"
+      height={['25vh', '20vh']}
+      width={['75vw', '64vw']}
+      invertX
     />
-
     <Triangle
       color="secondary"
       height={['38vh', '80vh']}
       width={['50vw', '35vw']}
     />
-
     <Triangle
-      color="primaryDark"
-      height={['25vh', '35vh']}
-      width={['75vw', '60vw']}
+      color="primaryLight"
+      height={['40vh', '40vh']}
+      width={['95vw', '60vw']}
+      invertY
       invertX
     />
 
@@ -33,7 +33,6 @@ const Background = () => (
       color="backgroundDark"
       height={['20vh', '20vh']}
       width={['100vw', '100vw']}
-      invertX
       invertY
     />
   </div>
@@ -74,23 +73,23 @@ const LandingPage = () => (
               as="h1"
               color="primary"
               fontSize={[5, 6, 8]}
-              mb={[3, 4, 5]}
+              mb={[1, 3, 3]}
             >
-              {`Hello, I'm ${name}!`}
+              {`Hi there, I'm ${name} !`}
             </Heading>
 
             <Heading
               as="h2"
               color="primary"
-              fontSize={[4, 5, 6]}
-              mb={[3, 5]}
+              fontSize={[3, 4, 4]}
+              mb={[2, 3, 4]}
               textAlign="center"
               style={centerHorizontally}
             >
               <TextLoop interval={5000}>
                 {roles
                   .sort(() => deterministicBehaviour || Math.random() - 0.5)
-                  .map(text => (
+                  .map((text) => (
                     <Text width={[300, 500]} key={text}>
                       {text}
                     </Text>
@@ -98,13 +97,26 @@ const LandingPage = () => (
               </TextLoop>
             </Heading>
 
+            <Text
+              fontSize={[3, 4, 4]}
+              width={[3 / 4, 2 / 3, 1 / 2]}
+              textAlign="center"
+              style={centerHorizontally}
+              mb={[2, 3, 4]}
+            >
+              I'm a Vietname/France-based software engineer, currently employed
+              by Orange Logic as a full stack engineer building Cortex, the best
+              Digital Asset Management on the market.
+            </Text>
+
             <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
               {socialLinks.map(({ id, ...rest }) => (
-                <Box mx={3} fontSize={[5, 6, 6]} key={id}>
+                <Box mx={3} fontSize={[3, 4, 4]} key={id}>
                   <SocialLink {...rest} />
                 </Box>
               ))}
             </Flex>
+
             <SectionLink section="about">
               {({ onClick }) => <MouseIcon onClick={onClick} />}
             </SectionLink>

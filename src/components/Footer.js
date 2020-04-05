@@ -17,10 +17,10 @@ const FooterContainer = styled.div`
 `;
 
 const TextFooter = styled(Text)`
-  color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.background};
 
   & a {
-    color: ${props => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.background};
   }
 `;
 
@@ -40,7 +40,7 @@ const Footer = () => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const { name, socialLinks } = data.contentfulAbout;
 
       return (
@@ -48,7 +48,7 @@ const Footer = () => (
           <FooterContainer>
             <Fade left>
               <TextFooter fontSize={[2, 3]}>
-                <span>{`${name} Portfolio - Powered by `}</span>
+                <span>{`${name}'s hacks - Powered by `}</span>
                 <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
                 <span>, </span>
                 <Link href="https://www.contentful.com/" mr={1}>

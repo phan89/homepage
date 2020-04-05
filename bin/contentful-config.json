@@ -260,8 +260,8 @@
           "omitted": false
         },
         {
-          "id": "projects",
-          "name": "Projects",
+          "id": "hacks",
+          "name": "Hacks",
           "type": "Array",
           "localized": false,
           "required": false,
@@ -515,7 +515,7 @@
           "widgetId": "singleLine"
         },
         {
-          "fieldId": "projects",
+          "fieldId": "hacks",
           "settings": {
             "bulkEditing": false
           },

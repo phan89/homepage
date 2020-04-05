@@ -53,7 +53,7 @@ const Title = styled(Text)`
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: ${props => props.theme.colors.primary} 5px solid;
+  border-bottom: ${(props) => props.theme.colors.primary} 5px solid;
 `;
 
 const TextContainer = styled.div`
@@ -142,7 +142,7 @@ const Project = ({
             </Box>
             <Box mx={1} fontSize={5}>
               <SocialLink
-                name="See project"
+                name="See hacks"
                 fontAwesomeIcon="globe"
                 url={projectUrl}
               />
@@ -176,8 +176,8 @@ Project.propTypes = {
 };
 
 const Projects = () => (
-  <Section.Container id="projects" Background={Background}>
-    <Section.Header name="Projects" icon="💻" label="notebook" />
+  <Section.Container id="hacks" Background={Background}>
+    <Section.Header name="Hacks" icon="🐒" label="monkey" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
